@@ -8,11 +8,11 @@
   placeholder="Select a Country"
   (onChange)="onChange($event)"
 >
-  <!-- <ng-template pTemplate="selectedItem">
+  <ng-template pTemplate="selectedItem">
     <div class="country-item country-item-value" *ngIf="selectedCountry">
       <div>{{ selectedCountry.label }}</div>
     </div>
-  </ng-template> -->
+  </ng-template>
   <ng-template let-country pTemplate="item">
     <div class="country-item">
       <div>{{ country.label }}</div>
@@ -36,3 +36,5 @@
   <br />
   <p-inputNumber inputId="integeronly" [(ngModel)]="value3"> </p-inputNumber>
 </div>
+
+<!-- <p-button label="Submit"></p-button> -->

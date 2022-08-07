@@ -14,23 +14,23 @@ interface City {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  shipment: any[];
+//   shipment: any[];
 
-  items: SelectItem[];
+//   items: SelectItem[];
 
-  item: string;
+//   item: string;
 
-  constructor() {
-    this.items = [];
+//   constructor() {
+//     this.items = [];
 
-    this.shipment = [
-      { label: 'small-shipment', capacity: 350 },
-      { label: 'medium-shipment', capacity: 550 },
-      { label: 'big-shipment', capacity: 750 },
-      { label: 'duckling-shipment', capacity: 2500 },
-    ];
-  }
-  onChange(value: string) {
-    alert('the selected value is ' + JSON.stringify(value));
-  }
+//     this.shipment = [
+//       { label: 'small-shipment', capacity: 350 },
+//       { label: 'medium-shipment', capacity: 550 },
+//       { label: 'big-shipment', capacity: 750 },
+//       { label: 'duckling-shipment', capacity: 2500 },
+//     ];
+//   }
+//   onChange(value: string) {
+//     alert('the selected value is ' + JSON.stringify(value));
+//   }
 }

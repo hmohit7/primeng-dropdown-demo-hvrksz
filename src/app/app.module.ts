@@ -1,14 +1,15 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent }   from './app.component';
+import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { DropdownModule } from 'primeng/dropdown';
-import {InputNumberModule} from 'primeng/inputnumber';
+import { InputNumberModule } from 'primeng/inputnumber';
 import { ValidatorComponent } from './validator/validator.component';
 import { DataEntryComponent } from './data-entry/data-entry.component';
+import { ButtonModule } from 'primeng/button';
 @NgModule({
   imports: [
     BrowserModule,
@@ -16,10 +17,10 @@ import { DataEntryComponent } from './data-entry/data-entry.component';
     DropdownModule,
     FormsModule,
     InputNumberModule,
-    AppRouting
+    AppRouting,
+    ButtonModule,
   ],
-  declarations: [ AppComponent,ValidatorComponent,DataEntryComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [AppComponent, ValidatorComponent, DataEntryComponent],
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}

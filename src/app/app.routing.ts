@@ -1,25 +1,18 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+// import { RouterModule } from '@angular/router';
 import { DataEntryComponent } from './data-entry/data-entry.component';
 import { ValidatorComponent } from './validator/validator.component';
+// import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
-// import { BlueComponent } from './components/blue.component';
-// import { RedComponent } from './components/red.component';
+const routes: Routes = [
+  { path: '**', component: DataEntryComponent },
+  { path: 'validate', component: ValidatorComponent },
+]; // sets up routes constant where you define your routes
 
+// configures NgModule imports and exports
 @NgModule({
-  imports: [
-    RouterModule.forRoot([
-      {
-        path: 'data',
-        component: DataEntryComponent,
-      },
-      {
-        path: 'validator',
-        component: ValidatorComponent,
-        // outlet: 'header1'
-      },
-    ]),
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRouting {}
