@@ -1,19 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { SelectItem } from 'primeng/api';
 import { SelectItemGroup } from 'primeng/api';
 import {InputNumberModule} from 'primeng/inputnumber';
+
 interface City {
   label: string;
   capacity: number;
 }
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-data-entry',
+  templateUrl: './data-entry.component.html',
+  styleUrls: ['./data-entry.component.css']
 })
-export class AppComponent {
+export class DataEntryComponent{
+
+
   shipment: any[];
 
   items: SelectItem[];

@@ -1,0 +1,38 @@
+<p-dropdown
+  [options]="shipment"
+  [(ngModel)]="selectedCountry"
+  optionLabel="label"
+  [filter]="true"
+  filterBy="label"
+  [showClear]="true"
+  placeholder="Select a Country"
+  (onChange)="onChange($event)"
+>
+  <!-- <ng-template pTemplate="selectedItem">
+    <div class="country-item country-item-value" *ngIf="selectedCountry">
+      <div>{{ selectedCountry.label }}</div>
+    </div>
+  </ng-template> -->
+  <ng-template let-country pTemplate="item">
+    <div class="country-item">
+      <div>{{ country.label }}</div>
+    </div>
+  </ng-template>
+</p-dropdown>
+<br />
+<br />
+<div class="p-field p-col-12 p-md-3">
+  <label for="integeronly">Length</label>
+  <br />
+  <p-inputNumber inputId="integeronly" [(ngModel)]="value1"> </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+  <label for="integeronly">Width</label>
+  <br />
+  <p-inputNumber inputId="integeronly" [(ngModel)]="value2"> </p-inputNumber>
+</div>
+<div class="p-field p-col-12 p-md-3">
+  <label for="integeronly">Height</label>
+  <br />
+  <p-inputNumber inputId="integeronly" [(ngModel)]="value3"> </p-inputNumber>
+</div>

@@ -4,17 +4,21 @@ import {FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent }   from './app.component';
-
+import { AppRouting } from './app.routing';
 import { DropdownModule } from 'primeng/dropdown';
-
+import {InputNumberModule} from 'primeng/inputnumber';
+import { ValidatorComponent } from './validator/validator.component';
+import { DataEntryComponent } from './data-entry/data-entry.component';
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    InputNumberModule,
+    AppRouting
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent,ValidatorComponent,DataEntryComponent ],
   bootstrap:    [ AppComponent ]
 })
 
