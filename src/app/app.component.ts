@@ -14,7 +14,7 @@ interface City {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-    shipment: any[];
+  shipment: any[];
 
   items: SelectItem[];
 
@@ -24,12 +24,13 @@ export class AppComponent {
     this.items = [];
 
     this.shipment = [
-        {label: "small-shipment", capacity: 350},
-        {label: "medium-shipment", capacity: 550},
-        {label: "big-shipment", capacity: 750},
-        {label: "duckling-shipment", capacity: 2500}
+      { label: 'small-shipment', capacity: 350 },
+      { label: 'medium-shipment', capacity: 550 },
+      { label: 'big-shipment', capacity: 750 },
+      { label: 'duckling-shipment', capacity: 2500 },
     ];
-
-    
+  }
+  onChange(value: string) {
+    alert('the selected value is ' + JSON.stringify(value));
   }
 }

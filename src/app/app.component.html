@@ -6,9 +6,8 @@
   filterBy="label"
   [showClear]="true"
   placeholder="Select a Country"
+	(onChange)="onChange($event)"
 >
-
-
 
   <ng-template pTemplate="selectedItem">
     <div class="country-item country-item-value" *ngIf="selectedCountry">
