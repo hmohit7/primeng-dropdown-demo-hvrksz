@@ -10,6 +10,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { ValidatorComponent } from './validator/validator.component';
 import { DataEntryComponent } from './data-entry/data-entry.component';
 import { ButtonModule } from 'primeng/button';
+import { UtilsService } from './utils.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -20,6 +21,7 @@ import { ButtonModule } from 'primeng/button';
     AppRouting,
     ButtonModule,
   ],
+  providers: [UtilsService],
   declarations: [AppComponent, ValidatorComponent, DataEntryComponent],
   bootstrap: [AppComponent],
 })

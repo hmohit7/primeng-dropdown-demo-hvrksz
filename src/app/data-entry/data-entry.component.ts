@@ -3,7 +3,8 @@ import { MenuItem } from 'primeng/api';
 import { SelectItem } from 'primeng/api';
 import { SelectItemGroup } from 'primeng/api';
 import { InputNumberModule } from 'primeng/inputnumber';
-// import { PrimeNGConfig } from 'primeng/api';
+import { UtilsService } from '../utils.service';
+
 interface City {
   label: string;
   capacity: number;
@@ -20,8 +21,10 @@ export class DataEntryComponent {
 
   item: string;
 
-  constructor() {
-    // this.primengConfig.ripple = true;
+  constructor(
+    private utils:UtilsService
+  ) {
+    
     this.items = [];
 
     this.shipment = [
@@ -35,7 +38,7 @@ export class DataEntryComponent {
     alert('the selected value is ' + JSON.stringify(value));
   }
 
-  onSave() {
-    alert('button');
+  gotoPage() {
+   this.utils.argusContainerData='harsh'
   }
 }

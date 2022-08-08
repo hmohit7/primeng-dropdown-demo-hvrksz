@@ -6,7 +6,7 @@ import { ValidatorComponent } from './validator/validator.component';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 
 const routes: Routes = [
-  { path: '**', component: DataEntryComponent },
+  { path: '', component: DataEntryComponent },
   { path: 'validate', component: ValidatorComponent },
 ]; // sets up routes constant where you define your routes
 

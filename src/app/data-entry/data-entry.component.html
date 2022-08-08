@@ -1,3 +1,7 @@
+<h5>
+Argus Logistics
+</h5>
+
 <p-dropdown
   [options]="shipment"
   [(ngModel)]="selectedCountry"
@@ -37,4 +41,4 @@
   <p-inputNumber inputId="integeronly" [(ngModel)]="value3"> </p-inputNumber>
 </div>
 
-<!-- <p-button label="Submit"></p-button> -->
+<p-button (click)="gotoPage()" routerLink="/validate" label="Submit"></p-button>
