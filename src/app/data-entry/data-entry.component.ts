@@ -16,15 +16,23 @@ interface City {
 })
 export class DataEntryComponent {
   shipment: any[];
-
+  containerData:any
   items: SelectItem[];
-
+  value1:any;
+  value2:any;
+  value3:any;
+  shipmentType:any;
   item: string;
 
   constructor(
     private utils:UtilsService
   ) {
-    
+    this.containerData={
+      containerType:'',
+      length:'',
+      width:'',
+      height:''
+    }
     this.items = [];
 
     this.shipment = [
@@ -36,9 +44,16 @@ export class DataEntryComponent {
   }
   onChange(value: string) {
     alert('the selected value is ' + JSON.stringify(value));
+    this.shipmentType=value
   }
 
   gotoPage() {
-   this.utils.argusContainerData='harsh'
+    this.containerData={
+      containerType:this.shipmentType,
+      length:this.value1,
+      width:this.value2,
+      height:this.value3
+    }
+   this.utils.argusContainerData=this.containerData
   }
 }
