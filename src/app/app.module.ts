@@ -11,6 +11,7 @@ import { ValidatorComponent } from './validator/validator.component';
 import { DataEntryComponent } from './data-entry/data-entry.component';
 import { ButtonModule } from 'primeng/button';
 import { UtilsService } from './utils.service';
+import { ValidatorServiceService } from './validator-service.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -21,7 +22,7 @@ import { UtilsService } from './utils.service';
     AppRouting,
     ButtonModule,
   ],
-  providers: [UtilsService],
+  providers: [UtilsService,ValidatorServiceService],
   declarations: [AppComponent, ValidatorComponent, DataEntryComponent],
   bootstrap: [AppComponent],
 })

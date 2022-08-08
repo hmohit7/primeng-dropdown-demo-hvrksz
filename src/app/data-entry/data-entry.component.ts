@@ -44,7 +44,7 @@ export class DataEntryComponent {
   }
   onChange(value: string) {
     alert('the selected value is ' + JSON.stringify(value));
-    this.shipmentType=value
+    this.shipmentType=JSON.stringify(value)
   }
 
   gotoPage() {
@@ -55,5 +55,7 @@ export class DataEntryComponent {
       height:this.value3
     }
    this.utils.argusContainerData=this.containerData
+
+   this.utils.triggerValidator()
   }
 }
