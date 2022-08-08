@@ -8,8 +8,10 @@ import { ValidatorServiceService } from '../validator-service.service';
   styleUrls: ['./validator.component.css'],
 })
 export class ValidatorComponent implements OnInit {
+  validatormessage
   constructor(
     private utils: UtilsService,
+
     private validateService: ValidatorServiceService
   ) {
     // this.utils.validator.subscribe((data) => {
@@ -34,9 +36,9 @@ export class ValidatorComponent implements OnInit {
     // });
 
 
-      let validatormessage=this.validateService.hasValidMessageDisplay(this.utils.argusContainerData)
+       this.validatormessage=this.validateService.hasValidMessageDisplay(this.utils.argusContainerData)
 
-      console.log(validatormessage)
+      console.log(this.validatormessage)
 
 
   }

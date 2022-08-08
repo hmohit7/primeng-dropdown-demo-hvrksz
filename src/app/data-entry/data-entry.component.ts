@@ -43,7 +43,7 @@ export class DataEntryComponent {
     ];
   }
   onChange(value: string) {
-    alert('the selected value is ' + JSON.stringify(value));
+    // alert('the selected value is ' + JSON.stringify(value));
     this.shipmentType=JSON.stringify(value)
   }
 
